@@ -1,0 +1,156 @@
+header {
+  width: 100%;
+  border-bottom: 1.5px solid #e5e7ea;
+  background: #fff;
+  // example
+  padding: 18px;
+  .nav {
+    display: flex;
+    height: 70px;
+    align-items: center;
+    justify-content: space-between;
+
+    &__list {
+      display: flex;
+      gap: 50px;
+      list-style-type: none;
+      align-items: center;
+
+      &--item {
+        text-transform: uppercase;
+
+        &-link {
+          text-decoration: none;
+          display: flex;
+          align-items: center;
+          color: #000;
+          text-align: center;
+          font-family: Montserrat;
+          font-size: 18px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: normal;
+        }
+      }
+    }
+    &__list-two {
+      display: flex;
+      list-style: none;
+      gap: 17px;
+      li {
+        display: flex;
+        align-items: center;
+        a {
+          text-decoration: none;
+          color: #000;
+          font-family: Montserrat;
+          font-size: 18px;
+          font-style: normal;
+          font-weight: 600;
+          line-height: normal;
+        }
+        .night {
+          padding: 18px;
+          border-radius: 100px;
+          background: #f5f5f5;
+          border: none;
+        }
+        .night:hover {
+          background: #f5f5f5;
+        }
+        .night:active {
+          background: #299764;
+        }
+        .night:hover svg path {
+          fill: #000000;
+        }
+        .night:active svg path {
+          fill: #ffffff;
+        }
+
+        .login {
+          color: #fff;
+          font-family: Montserrat;
+          font-size: 18px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: normal;
+          display: inline-flex;
+          padding: 18px 30px;
+          align-items: flex-start;
+          gap: 8px;
+          border-radius: 100px;
+          background: #299764;
+          border: none;
+        }
+        .login:hover {
+          border-radius: 100px;
+          background: #077743;
+        }
+        .login:active {
+          color: #000;
+          font-family: Montserrat;
+          font-size: 18px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: normal;
+          border-radius: 100px;
+          background: #f5f5f5;
+        }
+        .login:active svg path {
+          fill: #000;
+        }
+      }
+    }
+    .svg {
+      display: none;
+    }
+  }
+}
+@media (prefers-color-scheme: dark) {
+  header {
+    background-color: #1c1c1c;
+    border-bottom: none;
+
+    .nav {
+      &__list {
+        &--item {
+          &-link {
+            color: #fff !important;
+          }
+        }
+      }
+      &__list-two {
+        li {
+          .night {
+            background: #272727 !important;
+          }
+          a {
+            color: #fff !important;
+          }
+        }
+      }
+      .svg {
+        line {
+          stroke: #fff;
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-width: 794px) {
+  header {
+    .nav {
+      justify-content: space-between;
+      &__list {
+        display: none;
+      }
+      &__list-two {
+        display: none;
+      }
+      .svg {
+        display: block;
+      }
+    }
+  }
+}
